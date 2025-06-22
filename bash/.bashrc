@@ -120,4 +120,8 @@ fi
 
 #My configure
 alias tx="tmux"
+alias sl="ls"
+
+
+
 PS1='\[\e[01;35m\]\w\$> \[\e[00;37m\]'

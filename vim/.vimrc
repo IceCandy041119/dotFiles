@@ -21,15 +21,15 @@ set ttimeoutlen=50
 
 "Arrow key are prohibited
 "In normal mode
-nnoremap <Left> :echo "Use h"<CR>
-nnoremap <Right> :echo "Use l"<CR>
-nnoremap <Up> :echo "Use k"<CR>
-nnoremap <Down> :echo "Use j"<CR>
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
 "In insert mode
-inoremap <Left> :echo "Use h"<CR>
-inoremap <Right> :echo "Use l"<CR>
-inoremap <Up> :echo "Use k"<CR>
-inoremap <Down> :echo "Use j"<CR>
+inoremap <Left> <ESC>:echoe "Use h"<CR>
+inoremap <Right> <ESC>:echoe "Use l"<CR>
+inoremap <Up> <ESC>:echoe "Use k"<CR>
+inoremap <Down> <ESC>:echoe "Use j"<CR>
 
 "No use Ex mode
 nmap Q <Nop>
