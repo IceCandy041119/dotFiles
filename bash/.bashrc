@@ -123,5 +123,9 @@ alias tx="tmux"
 alias sl="ls"
 
 
-
-PS1='\[\e[01;35m\]\w\$> \[\e[00;37m\]'
+PS1='\[\e[01;31m\]\w\$> \[\e[00;37m\]'
+export NEMU_HOME=/home/icecandy041119/ysyx-workbench/nemu
+export AM_HOME=/home/icecandy041119/ysyx-workbench/abstract-machine
+export NVBOARD_HOME=/home/icecandy041119/ysyx-workbench/nvboard
+export NPC_HOME=/home/icecandy041119/ysyx-workbench/npc
+export PATH=$PATH:/home/icecandy041119/oss-cad-suite/bin

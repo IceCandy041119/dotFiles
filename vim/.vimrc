@@ -2,7 +2,8 @@
 set nocompatible
 
 "Set relativenumber
-set relativenumber
+"set relativenumber
+set number 
 
 "Set cursorline such as current underscore in the cursor
 set cursorline
@@ -11,10 +12,13 @@ set cursorline
 syntax enable
 
 "Display the tab key as four spaces wide
-set tabstop=4
+set tabstop=2
 
 "Just like it's name
 set autoindent
+set smartindent
+set cindent
+set shiftwidth=2
 
 "Reduces esc key response time
 set ttimeoutlen=50
@@ -61,4 +65,25 @@ set shortmess+=I
 "
 set backspace=indent,eol,start
 
+" 
 
+call plug#begin()
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'mileszs/ack.vim'
+Plug 'preservim/nerdtree'
+Plug 'easymotion/vim-easymotion'
+call plug#end()
+
+"ctrlp configure"
+let g:ctrlp_map='<c-p>'
+let g:ctrlp_cmd='CtrlP'
+let g:ctrlp_working_path_mode='ra'
+"
+
+"nerdtree configure"
+map <C-n> :NERDTreeToggle<CR>
+"
+
+"easymotion configure"
+nmap <C-q> <Plug>(easymotion-s)
+"
