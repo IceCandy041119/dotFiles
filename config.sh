@@ -31,7 +31,7 @@ sudo apt-get install -y \
 		 bison \
 		 libsdl2-dev \
 		 libsdl2-image-dev \
-		 libsdl2-tty-dev \
+		 libsdl2-ttf-dev \
 		 autoconf \
 		 device-tree-compiler
 
