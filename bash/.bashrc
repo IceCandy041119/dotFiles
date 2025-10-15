@@ -121,6 +121,8 @@ fi
 #My configure
 alias tx="tmux"
 alias sl="ls"
+alias dc="cd"
+alias nv="nvim"
 
 
 PS1='\[\e[01;31m\]\w\$> \[\e[00;37m\]'
@@ -129,3 +131,4 @@ export AM_HOME=/home/icecandy041119/ysyx-workbench/abstract-machine
 export NVBOARD_HOME=/home/icecandy041119/ysyx-workbench/nvboard
 export NPC_HOME=/home/icecandy041119/ysyx-workbench/npc
 export PATH=$PATH:/home/icecandy041119/oss-cad-suite/bin
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
