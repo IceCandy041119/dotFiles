@@ -1,7 +1,3 @@
-require("core.lazy")
-require("core.basic")
-require("core.keymap")
-
 local function getpos(width, height, pos, ui)
 	local x, y = 0, 0
 	if pos.pos then 
@@ -19,25 +15,22 @@ local function getpos(width, height, pos, ui)
 		elseif pos.pos:sub(2, 2) == 'r' then
 			x = ui.width - width
 		end
-    else
-        x, y = pos.x, pos.y
 	end
-    return x, y
 end
 
 
-function Create(opt)
+local function Create(opt)
 	local ui = vim.api.nvim_list_uis()[1]
 	local	win = vim.tbl_extend("force", {
 			width = math.ceil(ui.width / 2),
 			height = math.ceil(ui.height / 2),
 			buflisted = false,
-			title = 'result',
+			title = '',
 			lines = {},
-			pos = { pos = 'cc' },
+			pose = { pos = 'cc' },
 	}, opt or {})
 	if win.lines then
-		for _,v in ipairs(win.lines) do
+		for _,v in inpairs(win.lines) do
 			win.width = math.max(win.width, vim.fn.strchars(v))
 		end
 			win.height = math.max(win.height, #win.lines)
@@ -56,5 +49,6 @@ function Create(opt)
 		title_pos = 'center'
 	}
 	vim.api.nvim_open_win(buf, true, opts)
-	vim.api.nvim_buf_set_lines(buf, 0, -1, false, win.lines)
+	vim.apt.nvim_buf_set_lines(buf, 0, -1, false)
 end
+

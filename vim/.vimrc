@@ -67,23 +67,23 @@ set backspace=indent,eol,start
 
 " 
 
-call plug#begin()
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'mileszs/ack.vim'
-Plug 'preservim/nerdtree'
-Plug 'easymotion/vim-easymotion'
-call plug#end()
+""call plug#begin()
+""Plug 'ctrlpvim/ctrlp.vim'
+""Plug 'mileszs/ack.vim'
+""Plug 'preservim/nerdtree'
+""Plug 'easymotion/vim-easymotion'
+""call plug#end()
 
-"ctrlp configure"
-let g:ctrlp_map='<c-p>'
-let g:ctrlp_cmd='CtrlP'
-let g:ctrlp_working_path_mode='ra'
-"
-
-"nerdtree configure"
-map <C-n> :NERDTreeToggle<CR>
-"
-
-"easymotion configure"
-nmap <C-q> <Plug>(easymotion-s)
-"
+"""ctrlp configure"
+""let g:ctrlp_map='<c-p>'
+""let g:ctrlp_cmd='CtrlP'
+""let g:ctrlp_working_path_mode='ra'
+"""
+""
+"""nerdtree configure"
+""map <C-n> :NERDTreeToggle<CR>
+"""
+""
+"""easymotion configure"
+""nmap <C-q> <Plug>(easymotion-s)
+"""

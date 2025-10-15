@@ -1,7 +1,4 @@
-require("core.lazy")
-require("core.basic")
-require("core.keymap")
-
+local floatWindow = {}
 local function getpos(width, height, pos, ui)
 	local x, y = 0, 0
 	if pos.pos then 
@@ -26,13 +23,13 @@ local function getpos(width, height, pos, ui)
 end
 
 
-function Create(opt)
+function floatWindow.Create(opt)
 	local ui = vim.api.nvim_list_uis()[1]
 	local	win = vim.tbl_extend("force", {
 			width = math.ceil(ui.width / 2),
 			height = math.ceil(ui.height / 2),
 			buflisted = false,
-			title = 'result',
+			title = '',
 			lines = {},
 			pos = { pos = 'cc' },
 	}, opt or {})
@@ -58,3 +55,4 @@ function Create(opt)
 	vim.api.nvim_open_win(buf, true, opts)
 	vim.api.nvim_buf_set_lines(buf, 0, -1, false, win.lines)
 end
+return floatWindow

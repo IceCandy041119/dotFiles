@@ -122,7 +122,7 @@ fi
 alias tx="tmux"
 alias sl="ls"
 alias dc="cd"
-alias nv="nvim"
+alias v="nvim"
 
 
 PS1='\[\e[01;31m\]\w\$> \[\e[00;37m\]'
